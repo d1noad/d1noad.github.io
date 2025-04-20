@@ -198,6 +198,11 @@ h2 {
     font-family: 'Manrope', 'Inter', sans-serif;
 }
 
+h3 {
+  padding-top: 12px; 
+  padding-bottom: 5px;
+}
+
 .big-logo-block {
     text-align: center;
     margin-top: 65px
@@ -258,7 +263,7 @@ h2 {
 .section-for-all {
 
     padding: 10px 0;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 
 }
 
@@ -266,6 +271,7 @@ h2 {
 .texts {
     font-size: clamp(1rem, 1.5vw, 1.2rem); /* Динамический размер основного текста */
     line-height: 1.5;
+    padding-bottom: 0.7%;
 }
 
 @media (max-width: 768px) {
@@ -285,13 +291,6 @@ h2 {
     padding: 0 20px; /* Отступы по бокам сетки */
 }
 
-/* Первая строка — 3 карточки (по умолчанию) */
-
-/* Вторая строка — 2 карточки (центрируем) */
-.team-member:nth-child(n+4) {
-    grid-column: span 1; /* Каждая занимает 1 колонку */
-  }
-
 .team-section {
   padding: 50px 0; /* Отступы секции (замените на свои) */
 }
@@ -301,15 +300,7 @@ h2 {
   margin-bottom: 30px; /* Отступ под заголовком */
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-  grid-template-rows: auto auto; /* 2 строки */
-  gap: 30px; /* Отступ между карточками (замените) */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px; /* Отступы по бокам сетки */
-}
+
 
 /* Первая строка — 3 карточки (по умолчанию) */
 
@@ -351,5 +342,103 @@ h2 {
 }
 
 
+.document-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
 
+.document-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #375078;
+  transition: all 0.3s;
+  border: 1px solid #e1e5eb;
+}
+
+.document-link:hover {
+  background: #e8d8e0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(147, 70, 104, 0.1);
+}
+
+.document-link img {
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+/* Секция контактов */
+
+
+.contact-info {
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #934668;
+  margin-right: 15px;
+  width: 30px;
+  text-align: center;
+}
+
+.contact-link {
+  color: #375078;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: #934668;
+  text-decoration: underline;
+}
+
+/* Социальные сети */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.telegram { background: #2AABEE; }
+.whatsapp { background: #25D366; }
+.vk { background: #4C75A3; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .contact-link { font-size: 1rem; }
+  .social-link { width: 50px; height: 50px; font-size: 1.5rem; }
+}
 
