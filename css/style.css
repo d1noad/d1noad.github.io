@@ -341,6 +341,44 @@ h3 {
     font-size: clamp(0.8rem, 1.1vw, 1rem);
 }
 
+/* Мобильная адаптация */
+@media (max-width: 767px) {
+  .team-grid {
+      grid-template-columns: 1fr; /* 1 колонка */
+      gap: 15px;
+      padding: 0 10px;
+  }
+  
+  /* Сбрасываем позиционирование для мобильных */
+  .team-member:nth-child(n+4) {
+      grid-column: auto;
+  }
+  
+  .team-photo {
+      height: 250px; /* Чуть уменьшаем высоту */
+  }
+  
+  .team-name {
+      font-size: 1rem; /* Фиксированный размер */
+  }
+  
+  .team-position {
+      font-size: 0.85rem;
+  }
+}
+
+/* Опционально: промежуточный вариант для планшетов */
+@media (min-width: 768px) and (max-width: 991px) {
+  .team-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  }
+  
+  /* Сбрасываем центрирование */
+  .team-member:nth-child(n+4) {
+      grid-column: auto;
+  }
+}
+
 
 .document-list {
   display: flex;
